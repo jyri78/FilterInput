@@ -1,21 +1,21 @@
 # FilterInput
-Static wrapper functions for $_GET, $_POST, $_REQUEST, $_COOKIE, $_SERVER and $_ENV.
+Static wrapper functions for `$_GET`, `$_POST`, `$_REQUEST`, `$_COOKIE`, `$_SERVER` and `$_ENV`.
 
 ##Requirements
 * PHP 5.3.3+  (on most cases works with PHP 5.2+)
 
 ## QuickStart
 Functions, what are included (with beginning corresponding global variable name) are:
-* raw
-* string
-* stringUrlEncoded
-* stringMagicQuotes
-* html
-* float
-* integer
-* email
-* url
-* ip
+* Raw
+* String
+* StringUrlEncoded
+* StringMagicQuotes
+* Html
+* Float
+* Integer
+* Email
+* Url
+* Ip
 
 Example:
 ```php
