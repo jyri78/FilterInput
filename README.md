@@ -21,63 +21,58 @@ Functions, what are included (with beginning corresponding global variable name)
 For example, for `$_POST` functions would be as follows:
 
 ```php
+// Returns unsanitized (but trimmed) string from '$_POST'
 postRaw($variable, $falseNullToEmptyString = true)
 ```
-Returns unsanitized (but trimmed) string from `$_POST`.
-
 **bool** `$falseNullToEmptyString` – function will return empty string instead of 'false' or 'null' (default 'true')
 
 ```php
+// Returns sanitized string from '$_POST'
 postString($variable, $encodeHigh = false, $falseNullToEmptyString = true)
 ```
-Returns sanitized string from `$_POST`.
-
 **bool** `$encodeHigh` – encodes all characters with a numerical value >127 (default 'false')
 
 ```php
+// Returns URL-encoded string from '$_POST'
 postStringUrlEncoded($variable, $falseNullToEmptyString = true)
 ```
-Returns URL-encoded string from `$_POST`.
 
 ```php
+// Applies {@link http://php.net/manual/en/function.addslashes.php addslashes()} to the string from '$_POST'
 postStringMagicQuotes($variable, $falseNullToEmptyString = true)
 ```
-Applies [addslashes()](http://php.net/manual/en/function.addslashes.php) to the string from `$_POST`
 
 ```php
+// Returns HTML-escaped string (like with {@link http://php.net/manual/en/function.htmlspecialchars.php htmlspecialchars()}) from '$_POST'
 postHtml($variable, $falseNullToEmptyString = true)
 ```
-Returns HTML-escaped string (like with [htmlspecialchars()](http://php.net/manual/en/function.htmlspecialchars.php)) from `$_POST`.
 
 ```php
+// Validates and returns value as float from '$_POST'
 postFloat($variable, $nullToFalse = true)
 ```
-Validates and returns value as float from `$_POST`.
-
 **bool** `$nullToFalse` – function will return boolean false instead of 'null' (default 'true')
 
 ```php
+// Validates and returns value as integer from '$_POST'
 postInteger($variable, $nullToFalse = true)
 ```
-Validates and returns value as integer from `$_POST`.
 
 ```php
+// Returns email-address (if validates) or boolean false from '$_POST'
 postEmail($variable, $falseNullToEmptyString = true)
 ```
-Returns email-address (if validates) or boolean false from `$_POST`.
 
 ```php
+// Returns URL (if validates) or boolean false from '$_POST'
 postUrl($variable, $addShemeIfNecessary = true, $falseNullToEmptyString = true)
 ```
-Returns URL (if validates) or boolean false from `$_POST`.
-
 **bool** `$addShemeIfNecessary` – adds 'http://' to the string, if no sheme recognized, for validation (default 'true')
 
 ```php
+// Returns IP (if validates) or boolean false from '$_POST'
 postIp($variable, $noLoopbackRange = false, $noPrivateRange = false, $noReservedRange = false, $falseNullToEmptyString = true)
 ```
-Returns IP (if validates) or boolean false from `$_POST`.
-
 **bool** `$noLoopbackRange` – loopback (or localhost) address range is not allowed in validation (default 'false');
 
 **bool** `$noPrivateRange` – private address range is not allowed in validation (default 'false');
