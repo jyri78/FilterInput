@@ -1,7 +1,7 @@
 # [FilterInput](https://github.com/jyri78/FilterInput/)
 Static wrapper functions for `$_GET`, `$_POST`, `$_REQUEST`, `$_COOKIE`, `$_SERVER` and `$_ENV`.
 
-##Requirements
+## Requirements
 * PHP 5.3.3+  (on most cases works with PHP 5.2+)
 
 ## QuickStart
@@ -24,7 +24,7 @@ For example, for `$_POST` functions would be as follows (same goes for other glo
 // Returns unsanitized (but trimmed) string from '$_POST'
 postRaw($variable, $falseNullToEmptyString = true)
 ```
-**string** `$variable` – key of _$GLOBAL_, like `$_POST` etc.
+**string** `$variable` – key of _superglobal_, like `$_POST` etc.
 
 **bool** `$falseNullToEmptyString` – function will return empty string instead of 'false' or 'null' (default 'true')
 
@@ -86,7 +86,7 @@ postIp($variable, $noLoopbackRange = false, $noPrivateRange = false, $noReserved
 
 **bool** `$falseNullToEmptyString` – function will return empty string instead of 'false' or 'null'. If IP does not validate, then func will return boolean false regardless of the setting (default 'true').
 
-##Example:
+## Example:
 ```php
 require_once 'FilterInput.class.php';
 use jyri78\FilterInput as fi;
@@ -95,5 +95,5 @@ use jyri78\FilterInput as fi;
 echo fi::requestEmail('email');
 ```
 
-#Licence
+# Licence
 See [LICENSE](LICENSE)
