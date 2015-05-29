@@ -1,4 +1,4 @@
-# FilterInput
+# [FilterInput](https://github.com/jyri78/FilterInput/)
 Static wrapper functions for `$_GET`, `$_POST`, `$_REQUEST`, `$_COOKIE`, `$_SERVER` and `$_ENV`.
 
 ##Requirements
@@ -44,6 +44,7 @@ postStringMagicQuotes($variable, $falseNullToEmptyString = true)
 
 ```php
 // Returns HTML-escaped string (like with {@link http://php.net/manual/en/function.htmlspecialchars.php htmlspecialchars()}) from '$_POST'
+// Requires PHP 5.3.3+
 postHtml($variable, $falseNullToEmptyString = true)
 ```
 
