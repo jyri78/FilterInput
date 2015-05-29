@@ -18,12 +18,14 @@ Functions, what are included (with beginning corresponding global variable name)
 * Ip
 
 ### More about functions
-For example, for `$_POST` functions would be as follows:
+For example, for `$_POST` functions would be as follows (same goes for other globals):
 
 ```php
 // Returns unsanitized (but trimmed) string from '$_POST'
 postRaw($variable, $falseNullToEmptyString = true)
 ```
+**string** `$variable` – key of _$GLOBAL_, like `$_POST` etc.
+
 **bool** `$falseNullToEmptyString` – function will return empty string instead of 'false' or 'null' (default 'true')
 
 ```php
@@ -38,12 +40,13 @@ postStringUrlEncoded($variable, $falseNullToEmptyString = true)
 ```
 
 ```php
-// Applies {@link http://php.net/manual/en/function.addslashes.php addslashes()} to the string from '$_POST'
+// Applies {@link http://php.net/manual/en/function.addslashes.php addslashes()} to the string
 postStringMagicQuotes($variable, $falseNullToEmptyString = true)
 ```
 
 ```php
-// Returns HTML-escaped string (like with {@link http://php.net/manual/en/function.htmlspecialchars.php htmlspecialchars()}) from '$_POST'
+// Returns HTML-escaped string (like with
+// {@link http://php.net/manual/en/function.htmlspecialchars.php htmlspecialchars()}) from '$_POST'
 // Requires PHP 5.3.3+
 postHtml($variable, $falseNullToEmptyString = true)
 ```
@@ -72,7 +75,8 @@ postUrl($variable, $addShemeIfNecessary = true, $falseNullToEmptyString = true)
 
 ```php
 // Returns IP (if validates) or boolean false from '$_POST'
-postIp($variable, $noLoopbackRange = false, $noPrivateRange = false, $noReservedRange = false, $falseNullToEmptyString = true)
+postIp($variable, $noLoopbackRange = false, $noPrivateRange = false, $noReservedRange = false,
+        $falseNullToEmptyString = true)
 ```
 **bool** `$noLoopbackRange` – loopback (or localhost) address range is not allowed in validation (default 'false');
 
