@@ -46,7 +46,7 @@ postStringMagicQuotes($variable, $falseNullToEmptyString = true)
 
 ```php
 // Returns HTML-escaped string (like with
-// {@link http://php.net/manual/en/function.htmlspecialchars.php htmlspecialchars()}) from '$_POST'
+// {@link http://php.net/manual/en/function.htmlspecialchars.php htmlspecialchars()})
 // Requires PHP 5.3.3+
 postHtml($variable, $falseNullToEmptyString = true)
 ```
@@ -75,8 +75,8 @@ postUrl($variable, $addShemeIfNecessary = true, $falseNullToEmptyString = true)
 
 ```php
 // Returns IP (if validates) or boolean false from '$_POST'
-postIp($variable, $noLoopbackRange = false, $noPrivateRange = false, $noReservedRange = false,
-        $falseNullToEmptyString = true)
+postIp($variable, $noLoopbackRange = false, $noPrivateRange = false,
+        $noReservedRange = false, $falseNullToEmptyString = true)
 ```
 **bool** `$noLoopbackRange` – loopback (or localhost) address range is not allowed in validation (default 'false');
 
